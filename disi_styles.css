@@ -1,0 +1,167 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    background-image: url('img/fondo.png'); /* Usa la imagen de fondo original */
+    background-size: cover;
+    background-position: center;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+}
+
+.header-logo {
+    text-align: center;
+    margin-bottom: 40px; /* Aumenta el espacio debajo del logo */
+    margin-top: 30px; /* Espacio superior para despegarlo del borde */
+    max-width: 90%;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px; /* Asegura que el logo no sea más grande de 300px */
+    height: auto;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 20px; /* Reduce el espacio debajo del video */
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduce el espacio entre los botones */
+    width: 100%;
+    max-width: 350px; /* Reduce el ancho máximo de los botones */
+}
+
+/* Estilos para los botones de redes sociales */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px; /* Reduce el padding para que los botones sean más pequeños */
+    border-radius: 8px;
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido para todos los botones */
+}
+
+.social-btn i {
+    font-size: 20px; /* Reduce el tamaño del ícono */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    vertical-align: middle;
+}
+
+/* Botones individuales con colores específicos */
+.youtube-btn {
+    background-color: rgba(255, 0, 0, 0.7); /* Rojo translúcido */
+}
+
+.spotify-btn {
+    background-color: rgba(29, 185, 84, 0.7); /* Verde translúcido */
+}
+
+.web-btn {
+    background-color: rgba(0, 0, 0, 0.7); /* Negro translúcido */
+}
+
+.instagram-btn {
+    background-color: rgba(225, 48, 108, 0.7); /* Rosa translúcido */
+}
+
+.facebook-btn {
+    background-color: rgba(66, 103, 178, 0.7); /* Azul translúcido */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.social-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Footer */
+/* Estilos generales para el footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    margin-top: 20px;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Reduce el espacio entre los íconos */
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px; /* Reduce el tamaño de los íconos en el footer */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px; /* Reduce el tamaño del texto en el footer */
+    color: #ffffff;
+}
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-wrapper {
+        padding: 20px;
+    }
+
+    .social-btn {
+        padding: 8px 16px; /* Reduce aún más el tamaño de los botones en pantallas pequeñas */
+        font-size: 14px;
+    }
+
+    .social-btn i {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .logo {
+        max-width: 80%; /* Ajusta el logo para pantallas más pequeñas */
+    }
+}
