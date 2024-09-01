@@ -1,16 +1,43 @@
 /* Estilos generales */
+/* Placeholder borroso */
+/* Estilos generales */
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
     height: 100%;
-    background-image: url('img/fondo.png'); /* Usa la imagen de fondo original */
+    background-color: #000; /* Color de fondo por defecto */
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Estado de carga: Placeholder borroso */
+body.loading {
+    background-image: url('img/fondo.webp'); /* Placeholder borroso */
+    filter: blur(60px);
+    height: 100%;
+}
+
+/* Estado de carga completada con degradado */
+body.loaded {
+    filter: none;
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%), /* Degradado */
+        url('img/fondo.webp'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
 }
 
-.main-wrapper {
+/* Cobertura completa con opacidad reducida */
+body.loaded {
+    filter: none;
+    opacity: 0.8;
+}
+
+
+.main-wrapper { 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,13 +50,13 @@ body, html {
 .header-logo {
     text-align: center;
     margin-bottom: 40px; /* Aumenta el espacio debajo del logo */
-    margin-top: 30px; /* Espacio superior para despegarlo del borde */
-    max-width: 90%;
+    margin-top: 40px; /* Aumenta el espacio superior para más protagonismo */
+    max-width: 100%;
 }
 
 .logo {
     width: 100%;
-    max-width: 300px; /* Asegura que el logo no sea más grande de 300px */
+    max-width: 600px; /* Aumenta el tamaño máximo del logo */
     height: auto;
 }
 
@@ -162,6 +189,6 @@ body, html {
     }
 
     .logo {
-        max-width: 80%; /* Ajusta el logo para pantallas más pequeñas */
+        max-width: 85%; /* Ajusta el logo para pantallas más pequeñas */
     }
 }
